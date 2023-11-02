@@ -1,0 +1,175 @@
+*,*::before,*,*::after{
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Inter';
+}
+body{
+    background-color: hsl(233, 47%, 7%);
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+main{
+    background-color:hsl(244, 38%, 16%);
+    border-radius: .4rem;
+    width: 15rem;
+    overflow: hidden;
+    text-align: center;
+    transition: all 1s ease;
+    animation: interload 1s forwards;
+
+}
+.card{
+    padding-bottom: 1.5rem;
+}
+.text{
+    padding: 1.5rem 1rem .5rem 1rem;
+}
+
+.hero-img{
+    position: relative;
+  
+}
+
+.hero-img img:nth-child(1){
+   width: 100%;
+    
+}
+.hero-img img:nth-child(2){
+    display: none;  
+   
+}
+span.tint{
+    height: 98%;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: hsla(277, 72%, 31%, 0.62);
+}   
+
+strong{
+    color: hsl(277, 64%, 61%);
+}
+
+.text p{
+    line-height: 1.7;
+    color: hsla(0, 0%, 100%, 0.6);
+    letter-spacing: 0.021rem;
+    font-size:.7rem;
+    
+}
+ h1{
+    margin-bottom: .7rem;
+    font-size: 1.3rem;
+    color:  hsl(0, 0%, 100%);
+}
+section h2{
+    margin-top:1.2rem;
+    font-size: 1rem;
+    color:hsl(0, 0%, 100%);
+}
+section p{
+    font-family: 'Lexend Deca';
+    color: hsla(0, 0%, 100%, 0.6);
+    margin-top: .3rem;
+    font-size: .5rem;
+    letter-spacing: 0.062rem;
+    text-transform: uppercase;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+}
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+}
+    .attribution a {
+  color: hsl(228, 45%, 44%);
+ }
+
+
+ /* animation section */
+@keyframes interload {
+    0%{
+        transform: translateY(-7rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+ /* breakpoint section */
+  
+@media only screen and (min-width:900px){
+    html{
+        font-size: 18px;
+    }
+
+    main{
+        width:55rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    section{
+        display: flex;
+        justify-content:space-evenly;
+        margin-right: 3rem;
+    }
+    .hero-img{
+        order: 2;
+    }
+    .hero-img img:nth-child(1){
+        display: none;
+    }
+    .hero-img img:nth-child(2){
+        display: block;
+        width: 100%;
+        height: 100%;
+
+    }
+    span.tint{
+        height: 100%;
+        position: absolute;
+        top: 0; 
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        background-color: hsla(277, 72%, 31%, 0.62);
+    }  
+    .card{
+        padding: 2.5rem 2rem 0.5rem 2rem;
+    }
+    .text h1{
+        font-size:1.6rem;
+       margin-top: -1.5rem;
+    }
+    .text p{
+        margin-top: 1rem;
+    }
+   
+    .text{
+        padding-left: 2.5rem;
+        padding-top:3rem ;
+        padding-right:2.5rem ;
+        padding-bottom:2rem ;
+        text-align: left;
+    }
+
+}
+
+    
+  
+        
+    
